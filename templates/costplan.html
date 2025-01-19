@@ -1,0 +1,56 @@
+<!-- templates/costplan.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cost Plans</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Cost Plan Table</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Plan ID</th>
+                <th>Plan Name</th>
+                <th>Plan Description</th>
+                <th>Plan Type</th>
+                <th>Start Date</th>
+                <th>End Date</th>
+                <th>Created By</th>
+                <th>Created Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for plan in costplans %}
+            <tr>
+                <td>{{ plan.planid }}</td>
+                <td>{{ plan.planname }}</td>
+                <td>{{ plan.plandescription }}</td>
+                <td>{{ plan.plantype }}</td>
+                <td>{{ plan.startdate }}</td>
+                <td>{{ plan.enddate }}</td>
+                <td>{{ plan.createdby }}</td>
+                <td>{{ plan.createddate }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

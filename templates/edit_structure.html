@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% block content %}
+    
+<section class="section-padding section-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-12">
+                <h3 class="mb-4 pb-2">Edit Structure</h3>
+            </div>
+
+            <div class="col-lg-12 col-12">
+                <form action="{{ url_for('edit_structure', slno=structure.slno) }}" method="post" class="custom-form contact-form" role="form">
+                    <div class="row">
+    
+                        <div class="col-lg-12 col-12">
+                            <div class="form-floating">
+                                <input type="text" name="strid" id="strid" class="form-control" value="{{ structure.strid }}">
+                                <label for="strid">Str ID</label>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12 col-12">
+                            <div class="form-floating">
+                                <input type="text" name="strname" id="strname" class="form-control" value="{{ structure.strname }}">
+                                <label for="strname">Str Name</label>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12 col-12">
+                            <div class="form-floating">
+                                <input type="number" name="parentid" id="parentid" class="form-control" value="{{ structure.parentid }}">
+                                <label for="parentid">Parent ID</label>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12 col-12">
+                            <div class="form-floating">
+                                <input type="text" name="parentname" id="parentname" class="form-control" value="{{ structure.parentname }}">
+                                <label for="parentname">Parent Name</label>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-12 ms-auto">
+                            <button type="submit" class="form-control">Update</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% block content %}
+
+<section class="section-padding section-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-12">
+                <h3 class="mb-4 pb-2">Create new Resource</h3>
+            </div>
+
+            <div class="col-lg-12 col-12">
+                <form action="{{ url_for('add_resource') }}" method="post" class="custom-form contact-form" role="form">
+                    <div class="row">
+
+                        <div class="col-lg-12 col-12">
+                            <div class="form-floating">
+                                <input type="number" name="parentid" id="parentid" class="form-control" placeholder="Parent ID" required="">
+                                <label for="parentid">Parent ID</label>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12 col-12">
+                            <div class="form-floating">
+                                <input type="text" name="parentname" id="parentname" class="form-control" placeholder="Parent Name" required="">
+                                <label for="parentname">Parent Name</label>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12 col-12">
+                            <div class="form-floating">
+                                <input type="number" name="resourceid" id="resourceid" class="form-control" placeholder="Resource ID" required="">
+                                <label for="resourceid">Resource ID</label>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12 col-12">
+                            <div class="form-floating">
+                                <input type="text" name="resourcename" id="resourcename" class="form-control" placeholder="Resource Name" required="">
+                                <label for="resourcename">Resource Name</label>
+                            </div>
+                        </div>                   
+
+                        <div class="col-lg-12 col-12">
+                            <div class="form-floating">
+                                <input type="number" name="resourceamount" id="resourceamount" class="form-control" placeholder="Resource Amount" required="">
+                                <label for="resourceamount">Resource Amount</label>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-12 ms-auto">
+                            <button type="submit" class="form-control">Submit</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

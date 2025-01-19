@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+{% block content %}
+    
+<section class="section-padding section-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-12">
+                <h3 class="mb-4 pb-2">Edit Resource</h3>
+            </div>
+
+            <div class="col-lg-12 col-12">
+                <form action="{{ url_for('edit_resource', slno=resource.slno) }}" method="post" class="custom-form contact-form" role="form">
+                    <div class="row">
+    
+                        <div class="col-lg-12 col-12">
+                            <div class="form-floating">
+                                <input type="number" name="parentid" id="parentid" class="form-control" value="{{ resource.parentid }}">
+                                <label for="parentid">Parent ID</label>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12 col-12">
+                            <div class="form-floating">
+                                <input type="text" name="parentname" id="parentname" class="form-control" value="{{ resource.parentname }}">
+                                <label for="parentname">Parent Name</label>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12 col-12">
+                            <div class="form-floating">
+                                <input type="number" name="resourceid" id="resourceid" class="form-control" value="{{ resource.resourceid }}">
+                                <label for="resourceid">Resource ID</label>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12 col-12">
+                            <div class="form-floating">
+                                <input type="text" name="resourcename" id="resourcename" class="form-control" value="{{ resource.resourcename }}">
+                                <label for="resourcename">Resource Name</label>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12 col-12">
+                            <div class="form-floating">
+                                <input type="number" name="resourceamount" id="resourceamount" class="form-control" value="{{ resource.resourceamount }}">
+                                <label for="resourceamount">Resource Amount</label>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12 col-12">
+                            <div class="form-floating">
+                                <input type="number" name="planid" id="planid" class="form-control" value="{{ resource.planid }}">
+                                <label for="planid">Plan ID</label>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-12 ms-auto">
+                            <button type="submit" class="form-control">Update</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
